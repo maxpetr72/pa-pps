@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="Osnastka" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" version="1.1">
+	<object class="EqupmentList" table="equpment_list" extends="xPDOSimpleObject">
+		<field key="eq_type_name_id" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+		<field key="eq_list" dbtype="varchar" precision="5" phptype="string" null="false" index="index" />
+
+		<index alias="papps_osn_equpment_list_eq_type_name_id_idx" name="papps_osn_equpment_list_eq_type_name_id_idx" primary="false" unique="false" type="BTREE" >
+			<column key="eq_type_name_id" length="" collation="A" null="false" />
+		</index>
+		<index alias="papps_osn_equpment_list_eq_list_idx" name="papps_osn_equpment_list_eq_list_idx" primary="false" unique="false" type="BTREE" >
+			<column key="eq_list" length="" collation="A" null="false" />
+		</index>
+	</object>
+	<object class="EqupmentType" table="equpment_type" extends="xPDOSimpleObject">
+		<field key="eq_type_name" dbtype="varchar" precision="50" phptype="string" null="false" index="unique" />
+		<field key="eq_type_code" dbtype="varchar" precision="5" phptype="string" null="false" index="unique" />
+
+		<index alias="eq_type_name" name="eq_type_name" primary="false" unique="true" type="BTREE" >
+			<column key="eq_type_name" length="" collation="A" null="false" />
+		</index>
+		<index alias="eq_type_code" name="eq_type_code" primary="false" unique="true" type="BTREE" >
+			<column key="eq_type_code" length="" collation="A" null="false" />
+		</index>
+	</object>
+	<object class="PrintType" table="print_type" extends="xPDOSimpleObject">
+		<field key="pr_type_name_en" dbtype="varchar" precision="50" phptype="string" null="false" index="unique" />
+		<field key="pr_type_name_ru" dbtype="varchar" precision="50" phptype="string" null="false" index="unique" />
+
+		<index alias="pr_type_name_en" name="pr_type_name_en" primary="false" unique="true" type="BTREE" >
+			<column key="pr_type_name_en" length="" collation="A" null="false" />
+		</index>
+		<index alias="pr_type_name_ru" name="pr_type_name_ru" primary="false" unique="true" type="BTREE" >
+			<column key="pr_type_name_ru" length="" collation="A" null="false" />
+		</index>
+	</object>
+	<object class="Raports" table="raports" extends="xPDOSimpleObject">
+		<field key="z" dbtype="int" precision="11" phptype="integer" null="false" index="unique" />
+		<field key="mm" dbtype="decimal" precision="8,3" phptype="float" null="false" index="unique" />
+		<field key="is_uses" dbtype="tinyint" precision="1" phptype="integer" null="false" default="0" />
+
+		<index alias="MM" name="MM" primary="false" unique="true" type="BTREE" >
+			<column key="mm" length="" collation="A" null="false" />
+		</index>
+		<index alias="Z" name="Z" primary="false" unique="true" type="BTREE" >
+			<column key="z" length="" collation="A" null="false" />
+		</index>
+	</object>
+</model>

@@ -1,0 +1,14 @@
+/* 
+    Created on : 05.10.2018, 16:46:26
+    Author     : MaxP
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.test {
+    max-width: 500px;
+    margin: auto;
+    background-color: #f5f7c5;
+}
+.center table {width: 500px;}

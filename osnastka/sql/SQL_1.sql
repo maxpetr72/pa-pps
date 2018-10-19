@@ -1,0 +1,29 @@
+-- SELECT * 
+--     FROM pa.papps_osn_raports 
+--     WHERE is_uses=1 
+--     LIMIT 100
+-- ;
+-- INSERT INTO pa.papps_osn_equpment_type 
+--     (id, eq_type_name, eq_type_code) 
+--     VALUE 
+--     (1, "Arsoma", "A"), 
+--     (2, "RCS", "S"), 
+--     (3, "Berra", "F")
+-- ;
+-- INSERT INTO pa.papps_osn_equpment_list 
+--     (id, eq_type_name_id, eq_list) 
+--     VALUE 
+--     (1, 1, "A9"), 
+--     (2, 1, "A10"), 
+--     (3, 2, "S5"), 
+--     (4, 3, "F")
+-- ;
+-- INSERT INTO pa.papps_osn_print_type 
+--     (id, pr_type_name_en, pr_type_name_ru) 
+--     VALUE 
+--     (1, "Flexo", "Флексо"), 
+--     (2, "Trafaret", "Трафарет"), 
+--     (3, "Kongrev", "Конгрев"), 
+--     (4, "Emboss", "Тиснение"), 
+--     (5, "Knife", "Нож")
+-- ;
