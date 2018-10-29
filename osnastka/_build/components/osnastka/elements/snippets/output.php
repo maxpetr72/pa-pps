@@ -18,6 +18,9 @@ $content = "Just an example";
 $tplParser->setTpl('[[$title]]', $title);
 $tplParser->setTpl('[[$cssPath]]', $cssPass);
 $tplParser->setTpl('[[$content]]', $content);
+$tplParser->setTpl('[[title]]', $title);
+$tplParser->setTpl('[[cssPath]]', $cssPass);
+$tplParser->setTpl('[[content]]', $content);
 
 $tplParser->tplParse(); // Собираем страничку
 
